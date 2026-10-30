@@ -1,0 +1,12 @@
+N&H MUSIC - GÜNCEL PAKET
+
+GitHub Pages deposunun ana dizinine bu paketteki 4 dosyayı yükleyin:
+index.html, nh-logo.png, manifest.json, sw.js
+
+YouTube arama:
+- Uygulama YouTube Data API v3 ile canlı arama yapabilir.
+- Bunun için Google Cloud Console'da YouTube Data API v3 etkinleştirilmiş bir API anahtarı gerekir.
+- Anahtarı uygulamanın arama ekranındaki alana kendiniz girin; bu dosyada anahtar bulunmaz.
+- Anahtarsız durumda arama YouTube sitesine yönlendirilir. Bir YouTube video bağlantısı da uygulama içi oynatıcıda açılabilir.
+
+Not: YouTube videolarının uygulama içinde oynatılması YouTube oynatıcı kurallarına tabidir. Bu paket tüm şarkıların çevrimdışı veya reklamsız dinlenmesini sağlamaz.

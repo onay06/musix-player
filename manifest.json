@@ -1,19 +1,12 @@
 {
   "name": "N&H Music",
   "short_name": "N&H",
-  "description": "N&H Dünya Müzik Platformu",
+  "description": "N&H Music Collection",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f4f6fa",
   "theme_color": "#f4f6fa",
   "lang": "tr",
-  "icons": [
-    {
-      "src": "nh-logo.png",
-      "sizes": "260x253",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ]
+  "icons": [{"src":"nh-logo.png","sizes":"260x253","type":"image/png","purpose":"any"}]
 }

@@ -55,12 +55,47 @@ nav{position:fixed;z-index:12;bottom:0;left:0;right:0;background:#ffffffed;borde
 @media(min-width:700px){.theme-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 @media(min-width:700px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{min-height:270px}main{padding-top:25px}}
+
+.youtube-player{width:min(100%,720px);aspect-ratio:16/9;margin:0 auto 18px;border-radius:16px;overflow:hidden;background:#080808}
+.youtube-player iframe{width:100%;height:100%;border:0}
+.api-setup input{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);margin:8px 0}
+.api-help{font-size:12px;line-height:1.6;color:var(--muted)}
+.yt-result{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.yt-result img{width:132px;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:var(--surface2)}
+.yt-result .trackinfo{min-width:0;flex:1}
+.yt-result b{display:block;font-size:13px;line-height:1.35}
+.yt-result small{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+@media(max-width:430px){.yt-result img{width:108px}}
+
+/* N&H global theme palettes */
+body[data-theme="0"]{--bg:#edf5f1;--surface:#ffffff;--surface2:#e2eee8;--ink:#18352e;--muted:#668078;--line:#cbded5;--gold:#438d79;--gold2:#286b59;--accent:#438d79}
+body[data-theme="1"]{--bg:#f4f6fa;--surface:#ffffff;--surface2:#edf1f7;--ink:#172235;--muted:#66748a;--line:#dce3ed;--gold:#168fc1;--gold2:#0879a8;--accent:#168fc1}
+body[data-theme="2"]{--bg:#ecebea;--surface:#fffdfa;--surface2:#e6e1d9;--ink:#28231e;--muted:#766d62;--line:#d8d0c5;--gold:#a9824d;--gold2:#76552e;--accent:#a9824d}
+body[data-theme="3"]{--bg:#edf2f4;--surface:#ffffff;--surface2:#e0e9ed;--ink:#203744;--muted:#687f89;--line:#cedce2;--gold:#5c899c;--gold2:#376579;--accent:#5c899c}
+body[data-theme="4"]{--bg:#f2eee8;--surface:#fffdf9;--surface2:#e9e1d6;--ink:#302820;--muted:#817365;--line:#ded3c5;--gold:#9a7651;--gold2:#725438;--accent:#9a7651}
+body[data-theme="5"]{--bg:#f7efe5;--surface:#fffaf4;--surface2:#eee0ce;--ink:#39291e;--muted:#8b715e;--line:#e3d0bc;--gold:#b87943;--gold2:#89552e;--accent:#b87943}
+body[data-theme="6"]{--bg:#edf4f8;--surface:#ffffff;--surface2:#e0edf4;--ink:#17354a;--muted:#698397;--line:#d0e0e9;--gold:#397f9f;--gold2:#245d79;--accent:#397f9f}
+body[data-theme="7"]{--bg:#f5eee4;--surface:#fffaf1;--surface2:#eee0ca;--ink:#493321;--muted:#92775e;--line:#e1cfb6;--gold:#b27b43;--gold2:#80552d;--accent:#b27b43}
+body[data-theme="8"]{--bg:#eaf5f8;--surface:#ffffff;--surface2:#dceef3;--ink:#163c4b;--muted:#64828d;--line:#c8e0e8;--gold:#2695b5;--gold2:#176d89;--accent:#2695b5}
+body[data-theme="9"]{--bg:#eaf0f7;--surface:#ffffff;--surface2:#dce5f0;--ink:#1c2d43;--muted:#687b94;--line:#cdd8e6;--gold:#4d78a8;--gold2:#31577f;--accent:#4d78a8}
+body[data-theme] header,body[data-theme] nav{background:color-mix(in srgb,var(--surface) 94%,transparent);border-color:var(--line)}
+body[data-theme] .hero{background:linear-gradient(115deg,var(--surface2),var(--surface) 55%,var(--surface2));border-color:var(--line)}
+body[data-theme] .hero h1,body[data-theme] .sectionhead h2{color:var(--ink)}
+body[data-theme] .genre,body[data-theme] .panel,body[data-theme] .theme-card{background:var(--surface);border-color:var(--line)}
+body[data-theme] .search{border-color:var(--line);background:var(--surface)}
+body[data-theme] .search button,body[data-theme] .primary,body[data-theme] .chip.active{background:var(--gold);border-color:var(--gold)}
+body[data-theme] .theme-open{border-color:var(--line);color:var(--gold2);background:var(--surface)}
+body[data-theme] .theme-card.selected{border-color:var(--gold)}
+body[data-theme] .art,body[data-theme] .bigart{background:linear-gradient(140deg,var(--surface2),var(--gold));}
+body[data-theme] nav button.active,body[data-theme] .round{color:var(--gold2)}
+
+
 </style></head>
 <body>
-<header><div class="brand"><div class="monogram"><img src="nh-logo.png" alt="N&H logo"></div><div><div class="brandname">N&amp;H</div><div class="tag">MUSIC COLLECTION</div></div></div><div style="display:flex;align-items:center;gap:12px"><button class="theme-open" onclick="show('themes')">✦ Temalar</button><div id="network" class="connection">● ÇEVRİMİÇİ</div></div></header>
+<header><div class="brand"><div class="monogram"><img src="nh-logo.png" alt="N&H logo" onerror="this.style.display='none';this.parentElement.textContent='N&H';"></div><div><div class="brandname">N&amp;H</div><div class="tag">MUSIC COLLECTION</div></div></div><div style="display:flex;align-items:center;gap:12px"><button class="theme-open" onclick="show('themes')">✦ Temalar</button><div id="network" class="connection">● ÇEVRİMİÇİ</div></div></header>
 <main>
 <section id="home">
-<div class="welcome"><img src="nh-logo.png" alt="N&H açılış logosu"><div><span>WELCOME TO</span><b>N&amp;H MUSIC</b><small>Sound brings us together</small></div></div>
+<div class="welcome"><img src="nh-logo.png" alt="N&H açılış logosu" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;monogram&quot;>N&amp;H</div>');"><div><span>WELCOME TO</span><b>N&amp;H MUSIC</b><small>Sound brings us together</small></div></div>
 <div class="search"><span>⌕</span><input id="query" placeholder="Şarkı, sanatçı, albüm veya müzik türü ara"><button onclick="searchMusic()">ARA</button></div>
 <div class="hero"><div class="eyebrow">A SOUND THAT CONNECTS US</div><h1>Her şarkının bir hikâyesi var.</h1><p>Senin müziğin. Senin keşfin. Her dönemden sesler.</p><button class="cta" onclick="show('discover')">Müzik dünyasını keşfet ↗</button></div>
 <div class="sectionhead"><h2>Müzik türleri</h2><span>01 / DISCOVER</span></div><div class="grid">
@@ -77,10 +112,27 @@ nav{position:fixed;z-index:12;bottom:0;left:0;right:0;background:#ffffffed;borde
 <div class="sectionhead"><h2>Senin seçkin</h2><span>03 / LIBRARY</span></div><div id="tracks"></div>
 </section>
 <section id="discover" class="hide"><div class="sectionhead"><h2>Keşfet</h2><span>DISCOVER</span></div><div class="chips" id="genres"></div><div id="discoverTracks"></div><div class="panel"><b>Kaynakları genişlet</b><p class="small muted">Gerçek dünya kataloğu için Apple MusicKit ve uygun lisanslı servisler bağlanacak. YouTube'daki her içeriğe erişim, YouTube'un API ve oynatma kurallarıyla sınırlıdır; her parçayı serbestçe indirmek veya uygulama içinde reklamsız oynatmak mümkün değildir.</p></div></section>
-<section id="search" class="hide"><div class="sectionhead"><h2>Arama sonuçları</h2></div><p id="searchText" class="small muted"></p><div id="searchResults"></div></section>
+<section id="search" class="hide">
+<div class="sectionhead"><h2>YouTube müzik araması</h2><span>GLOBAL SEARCH</span></div>
+<p id="searchText" class="small muted">YouTube'da şarkı, sanatçı, canlı performans veya müzik videosu ara.</p>
+<div id="searchResults"></div>
+<div class="panel">
+<b>YouTube bağlantısıyla oynat</b>
+<p class="api-help">Bir YouTube video bağlantısı yapıştırarak N&amp;H oynatıcısında açabilirsin.</p>
+<div class="event-search"><input id="youtubeUrl" placeholder="YouTube video bağlantısını yapıştır"><button class="primary" onclick="playPastedYouTube()">Oynat</button></div>
+</div>
+<div class="panel api-setup" id="youtubeSetup">
+<b>N&H YouTube bağlantısı</b>
+<p class="api-help">Gerçek YouTube arama sonuçları için ücretsiz bir Google API anahtarı gerekir. Anahtarı bir kez buraya kaydetmen yeterli; bu cihazın tarayıcısında saklanır.</p>
+<input id="youtubeApiKey" type="password" autocomplete="off" placeholder="YouTube Data API anahtarını buraya yapıştır">
+<button class="primary" onclick="saveYouTubeKey()">Anahtarı kaydet</button>
+<p class="api-help">Anahtar oluşturma: Google Cloud Console'da bir proje aç, YouTube Data API v3'ü etkinleştir ve API anahtarı oluştur. Güvenlik için anahtarı HTTP yönlendirenleriyle yalnızca onayladığın GitHub Pages alan adına sınırla.</p>
+<a class="event-link" href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">YouTube Data API v3'ü aç ↗</a>
+</div>
+</section>
 <section id="library" class="hide"><div class="sectionhead"><h2>Kütüphanem</h2><button class="primary" onclick="createList()">＋ Liste oluştur</button></div><div class="panel"><b>♥ Beğenilen parçalar</b><div id="favoriteCount" class="small muted">0 parça</div></div><div id="lists"></div><div class="sectionhead"><h2>Favoriler</h2></div><div id="favorites"></div><div class="panel"><b>Bu cihaza müzik ekle</b><p class="small muted">Kendi ses dosyalarını seç. Dosyalar bu tarayıcıda saklanır ve çevrimdışı kullanılabilir.</p><label class="primary" for="audioFiles">Müzik dosyası seç</label><input id="audioFiles" type="file" accept="audio/*" multiple hidden><div id="localList"></div></div></section>
 <section id="offline" class="hide"><div class="sectionhead"><h2>Çevrimdışı müzik</h2><span>ON DEVICE</span></div><div class="panel"><div class="connection">● Cihazındaki kişisel müzikler</div><p class="small muted">Eklediğin kişisel ses dosyaları IndexedDB'de saklanır. İnternet bağlantısı olmadığında da erişebilirsin. Apple Music abonelik parçalarının indirilmesi Apple'ın kendi uygulaması ve lisans kurallarıyla yönetilir.</p><div id="offlineList"></div></div></section>
-<section id="themes" class="hide"><div class="sectionhead"><h2>Oynatıcı temaları</h2><span>10 TASARIM</span></div><p class="small muted">Tema seç. Müzik çalarken plak, kaset makaraları, piyano tuşları ve gitar telleri hareket eder.</p><div class="theme-grid" id="themeGrid"></div></section><section id="now" class="hide"><div class="sectionhead"><h2>Şimdi çalıyor</h2><span>N&amp;H PLAYER</span></div><div class="playerhero"><div class="scene-wrap" id="playerScene"></div><h2 id="nowTitle">Bir parça seç</h2><p id="nowArtist">Müzik yolculuğun burada başlar</p><div style="display:flex;justify-content:center;gap:22px;margin:22px"><button class="round" onclick="seek(-15)">−15</button><button class="primary" onclick="toggleAudio()">OYNAT / DURAKLAT</button><button class="round" onclick="seek(15)">+15</button></div></div><div class="panel"><b>Şarkı sözleri ve çeviri</b><p class="small muted">Türkçe senkron altyazı için lisanslı şarkı sözü kaynağı bağlantısı gereklidir. Bu alan entegrasyon için hazırlandı.</p></div></section>
+<section id="themes" class="hide"><div class="sectionhead"><h2>Oynatıcı temaları</h2><span>10 TASARIM</span></div><p class="small muted">Tema seç. Müzik çalarken plak, kaset makaraları, piyano tuşları ve gitar telleri hareket eder.</p><div class="theme-grid" id="themeGrid"></div></section><section id="now" class="hide"><div class="sectionhead"><h2>Şimdi çalıyor</h2><span>N&amp;H PLAYER</span></div><div class="playerhero"><div class="scene-wrap" id="playerScene"></div><div id="youtubePlayer" class="youtube-player hide"></div><h2 id="nowTitle">Bir parça seç</h2><p id="nowArtist">Müzik yolculuğun burada başlar</p><div style="display:flex;justify-content:center;gap:22px;margin:22px"><button class="round" onclick="seek(-15)">−15</button><button class="primary" onclick="toggleAudio()">OYNAT / DURAKLAT</button><button class="round" onclick="seek(15)">+15</button></div></div><div class="panel"><b>Şarkı sözleri ve çeviri</b><p class="small muted">Türkçe senkron altyazı için lisanslı şarkı sözü kaynağı bağlantısı gereklidir. Bu alan entegrasyon için hazırlandı.</p></div></section>
 </main>
 <div class="mini" id="mini"><div class="countdown" aria-label="Kalan süre"><svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="18"/><circle id="ringProgress" class="progress-ring" cx="21" cy="21" r="18"/></svg><span id="remaining">--:--</span></div><div class="trackinfo"><b id="miniTitle">N&amp;H</b><small id="miniArtist" class="muted">Yerel müzik</small><div class="bar"><i id="progress"></i></div></div><button onclick="toggleAudio()" id="playButton">Ⅱ</button><button onclick="show('now')">⌃</button></div>
 <nav><button class="active" data-page="home"><span>⌂</span>Ana Sayfa</button><button data-page="discover"><span>⌕</span>Keşfet</button><button data-page="offline"><span>⇩</span>Çevrimdışı</button><button data-page="library"><span>♡</span>Kütüphane</button><button data-page="themes"><span>✦</span>Temalar</button></nav>
@@ -98,12 +150,71 @@ function render(list,id){document.getElementById(id).innerHTML=list.length?list.
 function refresh(){render(demos,"tracks");render(locals.map(x=>({id:x.id,title:x.title,artist:"Bu cihazdan",genre:"Yerel"})),"localList");render(locals.map(x=>({id:x.id,title:x.title,artist:"Bu cihazdan",genre:"Çevrimdışı"})),"offlineList");render(all().filter(x=>favs.includes(x.id)),"favorites");document.getElementById("favoriteCount").textContent=favs.length+" parça";document.getElementById("lists").innerHTML=playlists.map((l,i)=>`<div class="panel"><div style="display:flex;justify-content:space-between"><b>♫ ${esc(l.name)}</b><button class="round" onclick="openPlaylist(${i})">›</button></div><small class="muted">${l.ids.length} parça</small></div>`).join("")}
 function show(id){document.querySelectorAll("main section").forEach(x=>x.classList.toggle("hide",x.id!==id));document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===id))}
 document.querySelectorAll("nav button").forEach(x=>x.onclick=()=>show(x.dataset.page));
-function filterGenre(g){render(g==="Tümü"?demos:demos.filter(x=>x.genre===g),"discoverTracks");show("discover")}
-function searchMusic(){let q=document.getElementById("query").value.trim().toLowerCase();let found=all().filter(x=>(x.title+" "+x.artist+" "+x.genre).toLowerCase().includes(q));document.getElementById("searchText").textContent="Cihazındaki örnek katalog ve eklediğin dosyalarda arama";render(found,"searchResults");show("search")}
+function filterGenre(g){if(g==="Tümü")searchYouTube("popular music");else searchYouTube(g+" music")}
+function playPastedYouTube(){
+ const raw=document.getElementById("youtubeUrl").value.trim();
+ const m=raw.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/);
+ const id=m?m[1]:(/^[A-Za-z0-9_-]{11}$/.test(raw)?raw:"");
+ if(!id){alert("Geçerli bir YouTube video bağlantısı veya 11 karakterli video kodu gir.");return}
+ playYouTube(id,"YouTube videosu","YouTube");
+}
+function saveYouTubeKey(){
+ let k=document.getElementById("youtubeApiKey").value.trim();
+ if(!k){alert("Önce API anahtarını yapıştır.");return}
+ localStorage.setItem("nh-youtube-key",k);
+ document.getElementById("youtubeApiKey").value="";
+ document.getElementById("youtubeSetup").classList.add("hide");
+ document.getElementById("searchText").textContent="YouTube bağlantısı kaydedildi. Şimdi arama yapabilirsin.";
+}
+async function searchYouTube(q){
+ q=q.trim();
+ show("search");
+ document.getElementById("searchText").textContent="YouTube'da aranıyor: "+q;
+ const key=localStorage.getItem("nh-youtube-key");
+ const box=document.getElementById("searchResults");
+ const setup=document.getElementById("youtubeSetup");
+ if(!key){
+  setup.classList.remove("hide");
+  box.innerHTML=`<div class="panel"><b>Şimdilik YouTube'da ara</b><p class="small muted">API anahtarı olmadan arama sonuçlarını uygulama içine çekemiyoruz. Aramanı YouTube'da açabilir veya bir video bağlantısını aşağıya yapıştırıp N&amp;H içinde oynatabilirsin.</p><a class="event-link" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent(q)}">YouTube'da “${esc(q)}” ara ↗</a></div>`;
+  return
+ }
+ setup.classList.add("hide");
+ box.innerHTML='<div class="empty">YouTube sonuçları yükleniyor…</div>';
+ try{
+  const u=new URL("https://www.googleapis.com/youtube/v3/search");
+  u.search=new URLSearchParams({part:"snippet",q:q+" music",type:"video",videoEmbeddable:"true",maxResults:"20",regionCode:"TR",relevanceLanguage:"tr",safeSearch:"moderate",key});
+  const r=await fetch(u);
+  const data=await r.json();
+  if(!r.ok)throw new Error(data.error?.message||"YouTube araması başarısız oldu.");
+  const items=(data.items||[]).filter(x=>x.id&&x.id.videoId);
+  if(!items.length){box.innerHTML='<div class="empty">Bu aramayla eşleşen oynatılabilir video bulunamadı. Başka bir kelime dene.</div>';return}
+  box.innerHTML=items.map(x=>{
+   const id=x.id.videoId,s=x.snippet;
+   return `<div class="yt-result"><img loading="lazy" src="${esc(s.thumbnails?.medium?.url||"")}" alt=""><div class="trackinfo"><b>${esc(s.title)}</b><small>${esc(s.channelTitle||"YouTube")} · ${esc((s.publishedAt||"").slice(0,10))}</small><button class="primary" style="margin-top:8px;padding:8px 12px" onclick="playYouTube('${esc(id)}','${encodeURIComponent(s.title)}','${encodeURIComponent(s.channelTitle||"YouTube")}')">▶ N&amp;H içinde oynat</button></div></div>`;
+  }).join("");
+  document.getElementById("searchText").textContent=`“${q}” için YouTube sonuçları · ${items.length} video`;
+ }catch(e){
+  box.innerHTML='<div class="empty">Arama yapılamadı: '+esc(e.message)+'. API anahtarını, API etkinleştirmesini ve alan adı kısıtlamasını kontrol et.</div>';
+  setup.classList.remove("hide");
+ }
+}
+function searchMusic(){let q=document.getElementById("query").value.trim();if(!q){alert("Aramak istediğin şarkıyı veya sanatçıyı yaz.");return}searchYouTube(q)}
+function playYouTube(id,titleEncoded,artistEncoded){
+ const title=decodeURIComponent(titleEncoded),artist=decodeURIComponent(artistEncoded);
+ current={id,title,artist,type:"youtube"};
+ const p=document.getElementById("youtubePlayer");
+ p.classList.remove("hide");
+ p.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&playsinline=1&rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+ document.getElementById("nowTitle").textContent=title;
+ document.getElementById("nowArtist").textContent=artist+" · YouTube";
+ document.getElementById("playerScene").classList.add("hide");
+ document.getElementById("mini").classList.remove("show");
+ show("now");
+}
 function favorite(id){favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];localStorage.setItem("nh-favs",JSON.stringify(favs));refresh()}
 function createList(){let n=prompt("Çalma listene isim ver:");if(!n)return;playlists.push({name:n,ids:[]});localStorage.setItem("nh-lists",JSON.stringify(playlists));refresh()}
 function openPlaylist(i){let l=playlists[i];render(all().filter(x=>l.ids.includes(x.id)),"searchResults");document.getElementById("searchText").textContent=l.name;show("search")}
-function play(id){let t=all().find(x=>x.id===id);if(!t)return;if(t.type!=="local"){alert("Bu örnek katalog satırıdır. Gerçek şarkı akışı için lisanslı müzik servisi bağlantısı gereklidir.");return}current=t;audio.src=URL.createObjectURL(t.blob);audio.play().catch(()=>{});applyTheme();document.getElementById("mini").classList.add("show");document.getElementById("miniTitle").textContent=t.title;document.getElementById("miniArtist").textContent=t.artist;document.getElementById("nowTitle").textContent=t.title;document.getElementById("nowArtist").textContent=t.artist;document.getElementById("playButton").textContent="Ⅱ"}
+function play(id){let t=all().find(x=>x.id===id);if(!t)return;if(t.type!=="local"){alert("Bu örnek katalog satırıdır. Gerçek şarkı akışı için lisanslı müzik servisi bağlantısı gereklidir.");return}current=t;document.getElementById("youtubePlayer").classList.add("hide");document.getElementById("youtubePlayer").innerHTML="";document.getElementById("playerScene").classList.remove("hide");audio.src=URL.createObjectURL(t.blob);audio.play().catch(()=>{});applyTheme();document.getElementById("mini").classList.add("show");document.getElementById("miniTitle").textContent=t.title;document.getElementById("miniArtist").textContent=t.artist;document.getElementById("nowTitle").textContent=t.title;document.getElementById("nowArtist").textContent=t.artist;document.getElementById("playButton").textContent="Ⅱ"}
 function toggleAudio(){if(!current)return;if(audio.paused){audio.play();applyTheme();document.getElementById("playButton").textContent="Ⅱ"}else{audio.pause();applyTheme();document.getElementById("playButton").textContent="▶"}}
 function seek(s){if(Number.isFinite(audio.duration))audio.currentTime=Math.max(0,Math.min(audio.duration,audio.currentTime+s))}
 audio.addEventListener("timeupdate",()=>document.getElementById("progress").style.width=(audio.duration?audio.currentTime/audio.duration*100:0)+"%");
@@ -133,15 +244,15 @@ else a+='<div class="scene-logo">N&amp;H</div>';
 return `<div class="scene ${n[i]}">${a}</div>`}
 function renderThemes(){let n=["nature","glass","vinyl","cassette","piano","guitar","headphones","radio","wave","city"];document.getElementById("themeGrid").innerHTML=themeNames.map((x,i)=>`<button class="theme-card ${i===selectedTheme?'selected':''}" onclick="selectTheme(${i})"><div class="theme-preview ${n[i]}"><div class="mini-logo">N&amp;H</div></div><b>${i+1}. ${x}</b><small>${themeDesc[i]}</small></button>`).join("");applyTheme()}
 function selectTheme(i){selectedTheme=i;localStorage.setItem("nh-theme",String(i));renderThemes()}
-function applyTheme(){let host=document.getElementById("playerScene");if(!host)return;host.className="scene-wrap"+(current&&current.type==="local"&&!audio.paused?" is-playing":"");host.innerHTML=sceneMarkup(selectedTheme)}
+function applyTheme(){document.body.dataset.theme=String(selectedTheme);let host=document.getElementById("playerScene");if(!host)return;host.className="scene-wrap"+(current&&current.type==="local"&&!audio.paused?" is-playing":"");host.innerHTML=sceneMarkup(selectedTheme)}
 
 function net(){let on=navigator.onLine;document.getElementById("network").textContent=on?"● ÇEVRİMİÇİ":"● ÇEVRİMDIŞI";document.getElementById("network").style.color=on?"var(--good)":"#e4ba7a"}
 window.addEventListener("online",net);window.addEventListener("offline",net);
 document.getElementById("genres").innerHTML=["Tümü","Jazz","Pop","Rap","R&B","Soul","Rock","Electronic","Latin"].map(x=>`<button class="chip" onclick="filterGenre('${x}')">${x}</button>`).join("");
 document.getElementById("eras").innerHTML=["1960’s Throwback","1970’s Classics","1980’s Retro","1990’s Golden Era","2000’s Throwback","2010’s Hits","2020–2026"].map(x=>`<button class="chip" onclick="eraFilter('${x.slice(0,4)}')">${x}</button>`).join("");
-function eraFilter(y){render(demos.filter(x=>x.year.startsWith(y.slice(0,3))),"discoverTracks");show("discover")}
+function eraFilter(y){searchYouTube(y+"s greatest hits music")}
 document.getElementById("query").addEventListener("keydown",e=>{if(e.key==="Enter")searchMusic()});
-(async()=>{try{db=await openDB();locals=await getAll();refresh()}catch(e){console.error(e)}net()renderThemes();
+(async()=>{try{db=await openDB();locals=await getAll();refresh()}catch(e){console.error(e)}net();renderThemes();let savedYtKey=localStorage.getItem("nh-youtube-key");if(savedYtKey){document.getElementById("youtubeSetup").classList.add("hide");}
 })();
 if("serviceWorker" in navigator && location.protocol==="https:")navigator.serviceWorker.register("./sw.js?v=5").catch(()=>{});
 </script></body></html>
