@@ -1,0 +1,19 @@
+MUSIX'i Windows bilgisayar ve iPhone 12 ile kurma
+
+Bu paket, Mac gerektirmeyen Ana Ekrana eklenebilir web uygulaması (PWA) sürümüdür. App Store uygulaması veya imzalı IPA değildir.
+
+1) Windows bilgisayarında MUSIX klasörünü bir HTTPS web barındırıcısına yükle.
+   Örnek kolay yöntem: GitHub hesabında yeni bir repository oluştur; bu klasördeki index.html, manifest.json, sw.js ve icon.svg dosyalarını repository köküne yükle. Repository Settings > Pages bölümünden Deploy from a branch seç, main ve /(root) seçip kaydet. Yayınlanan HTTPS adresini al.
+2) iPhone 12'de Safari'yi aç ve yayınlanan HTTPS adresini ziyaret et. Chrome değil, Safari kullan.
+3) Paylaş düğmesine bas.
+4) "Ana Ekrana Ekle" seçeneğine dokun. Varsa "Web Uygulaması Olarak Aç" seçeneğini açık bırak.
+5) Ekle'ye dokun. MUSIX simgesi iPhone ana ekranında görünür.
+6) İlk açılışta bir kez internet bağlantısı varken aç. Böylece uygulama kabuğu çevrimdışı kullanım için önbelleğe alınabilir.
+7) Kendi ses dosyalarını Kütüphanem > Telefondan müzik ekle bölümünden seç. Dosyalar IndexedDB'de saklanır; uygulamanın çevrimdışı ekranından erişebilirsin.
+
+ÖNEMLİ SINIRLAR
+- Şu anki sürümde demo katalog kayıtları arayüz örneğidir; bu demo kayıtlar gerçek şarkı sesleri değildir.
+- Kendi eklediğin ses dosyaları çalınabilir. iOS, web uygulamalarının arka plan sesini ve depolamasını kendi kurallarına göre yönetebilir; kritik dosyaların yedeğini tut.
+- Apple Music'in korumalı abonelik parçalarını bu uygulama indirip saklayamaz. Bu indirmeler Apple Music'in kendi uygulaması ve lisans kurallarıyla yönetilir.
+- Gerçek Apple Music katalog araması/çalma için MusicKit JS veya native MusicKit entegrasyonu, Apple Developer yapılandırması ve kullanıcının Apple Music erişim izni/üyeliği gerekir.
+- App Store'a çıkacak native iOS uygulaması için imzalama ve dağıtım gerekir. Mac'in olmaması geliştirmeyi durdurmaz; EAS gibi bulut iOS build servisleriyle Windows'tan derleme yapılabilir, ancak Apple Developer hesabı/sertifika ve test dağıtım kurulumu gerekir.
